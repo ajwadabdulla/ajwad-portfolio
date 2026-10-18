@@ -7,11 +7,11 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="py-14 border-t border-gray-300 bg-[#F9F9FA] text-xs font-sans text-neutral-500">
+      <footer className="py-14 border-t border-gray-300 bg-[#F9F9FA] text-xs font-sans text-neutral-600">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-[1180px] mx-auto px-6 sm:px-8 text-center"
         >
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
             <span className="text-neutral-400">&bull;</span>
             <button
               onClick={() => setTermsOpen(true)}
-              className="text-neutral-600 hover:text-[#E03C1A] underline underline-offset-4 decoration-neutral-300 hover:decoration-[#E03C1A] transition-colors"
+              className="text-neutral-700 hover:text-[#C83415] underline underline-offset-4 decoration-neutral-400 hover:decoration-[#C83415] transition-colors"
             >
               Terms and Conditions
             </button>

@@ -75,9 +75,9 @@ export const ContactSection: React.FC = () => {
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-mono text-xs uppercase tracking-widest text-[#E03C1A] font-bold block mb-3"
+          className="font-mono text-xs uppercase tracking-widest text-[#C83415] font-bold block mb-3"
         >
           06 &mdash; Get in Touch
         </motion.span>
@@ -123,7 +123,7 @@ export const ContactSection: React.FC = () => {
               className="group inline-flex items-center gap-2.5 px-6 py-3 min-h-[48px] rounded-none border border-neutral-300 bg-white text-[#111111] hover:bg-[#E03C1A] hover:text-white hover:border-[#E03C1A] transition-all duration-200 shadow-sm"
               aria-label={btn.label}
             >
-              <span className="text-[#E03C1A] group-hover:text-white transition-colors">
+              <span className="text-[#C83415] group-hover:text-white transition-colors">
                 {btn.icon}
               </span>
               <span className="text-xs sm:text-sm font-bold uppercase tracking-wider">

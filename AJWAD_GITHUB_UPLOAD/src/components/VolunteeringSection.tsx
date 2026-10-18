@@ -28,10 +28,10 @@ export const VolunteeringSection: React.FC = () => {
           >
             {/* Left Column (lg:col-span-4): Dates & Meta */}
             <div className="lg:col-span-4 flex flex-col">
-              <span className="text-xs font-bold tracking-widest text-gray-500 uppercase font-sans">
+              <span className="text-xs font-bold tracking-widest text-gray-600 uppercase font-sans">
                 Oct 2025
               </span>
-              <span className="text-xs font-bold tracking-widest text-[#E03C1A] uppercase font-sans mt-1.5">
+              <span className="text-xs font-bold tracking-widest text-[#C83415] uppercase font-sans mt-1.5">
                 Bahrain Olympic Committee
               </span>
             </div>

@@ -1,16 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import Lenis from 'lenis';
+
+// Critical Above-the-Fold Components (Bundled immediately for instant First Contentful Paint)
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Ticker } from './components/Ticker';
-import { AboutSection } from './components/AboutSection';
-import { ExperienceAndProjects } from './components/ExperienceAndProjects';
-import { CredentialsAndSkills } from './components/CredentialsAndSkills';
-import { VolunteeringSection } from './components/VolunteeringSection';
-import { ContactSection } from './components/ContactSection';
-import { Footer } from './components/Footer';
 import { ScrollControls } from './components/ScrollControls';
 import { DotFieldCanvas } from './components/DotFieldCanvas';
+
+// Code-Split Below-the-Fold Components via React.lazy() to reduce initial JS payload
+const Ticker = lazy(() => import('./components/Ticker'));
+const AboutSection = lazy(() => import('./components/AboutSection'));
+const ExperienceAndProjects = lazy(() => import('./components/ExperienceAndProjects'));
+const CredentialsAndSkills = lazy(() => import('./components/CredentialsAndSkills'));
+const VolunteeringSection = lazy(() => import('./components/VolunteeringSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const Footer = lazy(() => import('./components/Footer'));
 
 export const App: React.FC = () => {
   useEffect(() => {
@@ -57,28 +61,32 @@ export const App: React.FC = () => {
 
       {/* Main Dossier Curtain - Overlaps the Hero cleanly on scroll */}
       <main className="relative z-10 bg-[#F9F9FA] shadow-[0_-25px_50px_rgba(0,0,0,0.06)] border-t border-gray-300">
-        {/* Sideways Ticker */}
-        <Ticker />
+        <Suspense fallback={<div className="min-h-[160px] bg-[#F9F9FA]" />}>
+          {/* Sideways Ticker */}
+          <Ticker />
 
-        {/* About Section */}
-        <AboutSection />
+          {/* About Section */}
+          <AboutSection />
 
-        {/* Experience & Projects */}
-        <ExperienceAndProjects />
+          {/* Experience & Projects */}
+          <ExperienceAndProjects />
 
-        {/* Credentials & Skills */}
-        <CredentialsAndSkills />
+          {/* Credentials & Skills */}
+          <CredentialsAndSkills />
 
-        {/* Volunteering */}
-        <VolunteeringSection />
+          {/* Volunteering */}
+          <VolunteeringSection />
 
-        {/* Contact Section */}
-        <ContactSection />
+          {/* Contact Section */}
+          <ContactSection />
+        </Suspense>
       </main>
 
       {/* Footer */}
-      <div className="relative z-10">
-        <Footer />
+      <div className="relative z-10 bg-[#F9F9FA]">
+        <Suspense fallback={<div className="h-24 bg-[#F9F9FA]" />}>
+          <Footer />
+        </Suspense>
       </div>
     </div>
   );

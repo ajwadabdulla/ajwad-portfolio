@@ -44,7 +44,7 @@ export const ScrollControls: React.FC = () => {
             transition={{ duration: 0.25, ease: 'easeOut' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="fixed bottom-8 right-8 z-50 bg-white border border-gray-300 shadow-md rounded-none px-3 py-2 text-[10px] font-bold tracking-widest text-gray-500 uppercase hover:text-black hover:bg-neutral-50 hover:border-gray-400 transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-black select-none cursor-pointer"
+            className="fixed bottom-8 right-8 z-50 bg-white border border-gray-300 shadow-md rounded-none px-3 py-2 text-[10px] font-bold tracking-widest text-gray-700 uppercase hover:text-black hover:bg-neutral-50 hover:border-gray-400 transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-black select-none cursor-pointer"
             aria-label="Back to top"
           >
             &uarr; TOP

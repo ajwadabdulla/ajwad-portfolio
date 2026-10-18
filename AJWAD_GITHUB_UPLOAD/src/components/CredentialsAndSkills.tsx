@@ -56,7 +56,7 @@ export const CredentialsAndSkills: React.FC = () => {
                 <span className="text-7xl md:text-9xl font-black tracking-tighter text-[#111111] leading-none select-none">
                   13 / 13
                 </span>
-                <span className="text-sm font-bold tracking-widest text-[#E03C1A] uppercase mt-3">
+                <span className="text-sm font-bold tracking-widest text-[#C83415] uppercase mt-3">
                   EXAMS COMPLETED IN 2026
                 </span>
               </div>
@@ -77,7 +77,7 @@ export const CredentialsAndSkills: React.FC = () => {
                   <h4 className="text-lg sm:text-xl font-bold text-[#111111]">
                     Dayananda Sagar University, Bangalore
                   </h4>
-                  <span className="font-mono text-sm font-semibold text-neutral-500 whitespace-nowrap">
+                  <span className="font-mono text-sm font-semibold text-neutral-600 whitespace-nowrap">
                     2021 &mdash; 2024
                   </span>
                 </div>
@@ -98,7 +98,7 @@ export const CredentialsAndSkills: React.FC = () => {
                   <h4 className="text-lg sm:text-xl font-bold text-[#111111]">
                     The Indian School, Bahrain
                   </h4>
-                  <span className="font-mono text-sm font-semibold text-neutral-500 whitespace-nowrap">
+                  <span className="font-mono text-sm font-semibold text-neutral-600 whitespace-nowrap">
                     2007 &mdash; 2021
                   </span>
                 </div>
@@ -136,7 +136,7 @@ export const CredentialsAndSkills: React.FC = () => {
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
-                <span className="text-xs font-bold tracking-widest text-[#E03C1A] uppercase block mb-2">
+                <span className="text-xs font-bold tracking-widest text-[#C83415] uppercase block mb-2">
                   TECHNICAL
                 </span>
                 <p className="text-base sm:text-lg font-medium text-[#111111] leading-relaxed">
@@ -152,7 +152,7 @@ export const CredentialsAndSkills: React.FC = () => {
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
-                <span className="text-xs font-bold tracking-widest text-[#E03C1A] uppercase block mb-2">
+                <span className="text-xs font-bold tracking-widest text-[#C83415] uppercase block mb-2">
                   FOUNDATIONS
                 </span>
                 <p className="text-base sm:text-lg font-medium text-[#111111] leading-relaxed">
@@ -168,7 +168,7 @@ export const CredentialsAndSkills: React.FC = () => {
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
-                <span className="text-xs font-bold tracking-widest text-[#E03C1A] uppercase block mb-2">
+                <span className="text-xs font-bold tracking-widest text-[#C83415] uppercase block mb-2">
                   ANALYSIS AND TOOLS
                 </span>
                 <p className="text-base sm:text-lg font-medium text-[#111111] leading-relaxed">
@@ -184,7 +184,7 @@ export const CredentialsAndSkills: React.FC = () => {
                 transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6 border-b border-gray-300"
               >
-                <span className="text-xs font-bold tracking-widest text-[#E03C1A] uppercase block mb-2">
+                <span className="text-xs font-bold tracking-widest text-[#C83415] uppercase block mb-2">
                   LANGUAGES
                 </span>
                 <p className="text-base sm:text-lg font-medium text-[#111111] leading-relaxed">

@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.id, link.href)}
                 className={`relative py-2 text-xs font-bold tracking-widest uppercase transition-colors duration-200 ${
-                  isActive ? 'text-[#111111]' : 'text-gray-500 hover:text-[#111111]'
+                  isActive ? 'text-[#111111]' : 'text-gray-600 hover:text-[#111111]'
                 }`}
               >
                 {link.name}
@@ -137,7 +137,7 @@ export const Navbar: React.FC = () => {
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.id, link.href)}
                   className={`text-xs font-bold uppercase tracking-widest py-3 border-b border-gray-200 flex items-center justify-between transition-colors ${
-                    isActive ? 'text-[#111111]' : 'text-gray-500 hover:text-[#111111]'
+                    isActive ? 'text-[#111111]' : 'text-gray-600 hover:text-[#111111]'
                   }`}
                 >
                   <span>{link.name}</span>
