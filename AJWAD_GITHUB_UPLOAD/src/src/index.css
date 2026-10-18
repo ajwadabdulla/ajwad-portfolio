@@ -1,0 +1,100 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #FAF8F5;
+    --surface-color: #FFFFFF;
+    --border-color: #E5DEC9;
+    --text-color: #1C1917;
+    --muted-color: #57534E;
+    --heading-color: #064E3B;
+    --btn-bg: #064E3B;
+    --btn-text: #EFE2BC;
+    --gold-accent: #C5A059;
+    color-scheme: light;
+  }
+
+  html {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color-scheme: light;
+  }
+
+  /* Lenis recommended css */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #1C1917;
+    font-size: 16.5px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Line length limit for readable text under 70 characters */
+  p, .prose-line {
+    max-width: 68ch;
+  }
+
+  /* Requirement 6: Focus ring: 2px #064E3B with offset */
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid #064E3B;
+    outline-offset: 3px;
+  }
+}
+
+/* Requirement 8b: Heading Reveal Animation */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger {
+  transition-delay: 80ms;
+}
+
+/* Reduced motion rules */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
