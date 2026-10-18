@@ -42,7 +42,7 @@ export const ExperienceAndProjects: React.FC = () => {
           <motion.h2
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-6xl md:text-8xl font-black tracking-tighter leading-none text-[#111111] mb-12 lg:mb-16 font-sans"
           >
@@ -56,7 +56,7 @@ export const ExperienceAndProjects: React.FC = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start border-b border-gray-300 py-10 group"
               >
@@ -94,7 +94,7 @@ export const ExperienceAndProjects: React.FC = () => {
           <motion.h2
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-6xl md:text-8xl font-black tracking-tighter leading-none text-[#111111] mb-12 lg:mb-16 font-sans"
           >
@@ -108,7 +108,7 @@ export const ExperienceAndProjects: React.FC = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start border-b border-gray-300 py-10 group"
               >

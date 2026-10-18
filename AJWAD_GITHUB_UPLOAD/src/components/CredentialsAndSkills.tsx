@@ -18,7 +18,7 @@ export const CredentialsAndSkills: React.FC = () => {
             <motion.h2
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-12 lg:mb-16 text-[#111111]"
             >
@@ -29,7 +29,7 @@ export const CredentialsAndSkills: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="border-t border-gray-300 pt-8 pb-10 grid grid-cols-1 sm:grid-cols-12 gap-8 items-start"
             >
@@ -69,7 +69,7 @@ export const CredentialsAndSkills: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
@@ -90,7 +90,7 @@ export const CredentialsAndSkills: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
@@ -119,7 +119,7 @@ export const CredentialsAndSkills: React.FC = () => {
             <motion.h3
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="text-3xl font-black text-[#111111] tracking-tight mb-8"
             >
@@ -132,7 +132,7 @@ export const CredentialsAndSkills: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
@@ -148,7 +148,7 @@ export const CredentialsAndSkills: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
@@ -164,7 +164,7 @@ export const CredentialsAndSkills: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6"
               >
@@ -180,7 +180,7 @@ export const CredentialsAndSkills: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="border-t border-gray-300 py-6 border-b border-gray-300"
               >

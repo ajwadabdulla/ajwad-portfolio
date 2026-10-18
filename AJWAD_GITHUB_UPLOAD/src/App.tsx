@@ -10,7 +10,6 @@ import { VolunteeringSection } from './components/VolunteeringSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ScrollControls } from './components/ScrollControls';
-import { ScrollBlurOverlay } from './components/ScrollBlurOverlay';
 import { DotFieldCanvas } from './components/DotFieldCanvas';
 
 export const App: React.FC = () => {
@@ -45,19 +44,19 @@ export const App: React.FC = () => {
       {/* 1. Scroll Progress Bar (Top Edge) & Back to Top Button */}
       <ScrollControls />
 
-      {/* Dynamic Scroll Blur Overlay (z-40) */}
-      <ScrollBlurOverlay />
-
       {/* Background dot field canvas */}
       <DotFieldCanvas />
 
       {/* Top Sticky Navbar */}
       <Navbar />
 
-      <main className="relative z-10">
-        {/* Hero Section */}
+      {/* Hero Section - Sticky pinned backdrop with crystal-clear portrait */}
+      <div className="relative lg:sticky lg:top-0 z-0 w-full min-h-screen">
         <Hero />
+      </div>
 
+      {/* Main Dossier Curtain - Overlaps the Hero cleanly on scroll */}
+      <main className="relative z-10 bg-[#F9F9FA] shadow-[0_-25px_50px_rgba(0,0,0,0.06)] border-t border-gray-300">
         {/* Sideways Ticker */}
         <Ticker />
 

@@ -86,7 +86,7 @@ export const ContactSection: React.FC = () => {
         <motion.h2
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
           className="text-4xl sm:text-5xl md:text-6xl font-black text-[#111111] tracking-tight mb-4"
         >
@@ -97,7 +97,7 @@ export const ContactSection: React.FC = () => {
         <motion.p
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="text-base sm:text-lg text-neutral-600 leading-relaxed mb-12 max-w-xl"
         >
@@ -109,7 +109,7 @@ export const ContactSection: React.FC = () => {
           variants={buttonContainerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.2 }}
           className="flex flex-wrap items-center gap-4"
         >
           {iconButtons.map((btn) => (

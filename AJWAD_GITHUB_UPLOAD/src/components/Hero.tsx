@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ScrollBlurOverlay } from './ScrollBlurOverlay';
 
 export const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -79,31 +78,10 @@ export const Hero: React.FC = () => {
             {/* Subheadline */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg text-neutral-600 font-normal leading-relaxed max-w-xl mb-10 rounded-none"
+              className="text-base sm:text-lg text-neutral-600 font-normal leading-relaxed max-w-xl rounded-none"
             >
-              ACCA Affiliate and accounting graduate based in Bahrain. Open to audit, internal audit, and financial analysis roles across the GCC.
+              ACCA Affiliate and Accounting graduate based in Bahrain. Open to audit, internal audit, and financial analysis roles across the GCC.
             </motion.p>
-
-            {/* Buttons: Two inline items (solid red-orange sharp button + bold underlined text link) */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-wrap items-center gap-6 sm:gap-8 rounded-none"
-            >
-              <a
-                href="/Ajwad_Abdulla_Alavi_CV.pdf"
-                download="Ajwad_Abdulla_Alavi_CV.pdf"
-                className="px-8 py-4 bg-[#E03C1A] hover:bg-[#c53214] text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-none shadow-sm transition-colors duration-200 inline-flex items-center justify-center min-h-[48px]"
-              >
-                Download CV
-              </a>
-
-              <a
-                href="#experience-and-projects"
-                className="text-[#111111] hover:text-[#E03C1A] text-sm sm:text-base font-bold underline underline-offset-8 decoration-2 hover:decoration-[#E03C1A] transition-colors duration-200 py-3 rounded-none inline-flex items-center"
-              >
-                See case results
-              </a>
-            </motion.div>
           </motion.div>
         </motion.div>
 
@@ -167,9 +145,6 @@ export const Hero: React.FC = () => {
               height="800"
             />
           </motion.div>
-
-          {/* Dynamic Scroll Blur Overlay directly over the Hero Image */}
-          <ScrollBlurOverlay className="absolute inset-0 pointer-events-none z-10 rounded-none select-none" />
         </div>
 
       </div>
