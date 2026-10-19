@@ -4,20 +4,17 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 export const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
 
-  // PART 3: Scroll-Driven hooks for parallax & fade-out
+  // Scroll-Driven hooks for left-column fade-out
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end start'],
   });
 
-  // Parallax Image Scrolling: Maps vertical scroll to a subtle downward translation (0% to 18%)
-  const imageParallaxY = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
-
   // Content Fade-Out: Text in the left column smoothly fades to opacity: 0 and glides upward as user scrolls deep
   const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
   const contentTranslateY = useTransform(scrollYProgress, [0, 0.65], [0, -45]);
 
-  // PART 2: Initial Load Stagger Variants
+  // Initial Load Stagger Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,13 +41,13 @@ export const Hero: React.FC = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative w-full min-h-screen grid grid-cols-1 lg:grid-cols-12 bg-[#F9F9FA] text-[#111111] border-b border-neutral-200 overflow-hidden"
+      className="relative w-full min-h-[calc(100vh-100px)] lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-[#F9F9FA] text-[#111111] border-b border-gray-300 overflow-hidden"
     >
       
       {/* ========================================================
-          LEFT COLUMN (col-span-7) - Calder & Wynn Layout
+          LEFT COLUMN - Calder & Wynn Layout
           ======================================================== */}
-      <div className="col-span-1 lg:col-span-7 flex flex-col justify-center px-6 sm:px-12 lg:px-16 xl:px-20 pt-28 pb-16 lg:py-24 relative z-10">
+      <div className="flex flex-col justify-center px-6 sm:px-12 lg:px-16 xl:px-20 pt-28 pb-16 lg:py-24 relative z-10">
         
         {/* Scroll-driven fade-out wrapper */}
         <motion.div
@@ -86,7 +83,7 @@ export const Hero: React.FC = () => {
         </motion.div>
 
         {/* ========================================================
-            VERTICAL SCROLL INDICATOR (Blushing Globe Style)
+            VERTICAL SCROLL INDICATOR
             ======================================================== */}
         <motion.div
           style={{ opacity: contentOpacity }}
@@ -116,37 +113,23 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* ========================================================
-          RIGHT COLUMN (col-span-5) - Clean Full-Bleed Image (No Overlapping Box)
+          RIGHT COLUMN - Strict 50% Split, B&W Editorial Portrait
           ======================================================== */}
-      <div className="col-span-1 lg:col-span-5 relative w-full h-full min-h-[480px] sm:min-h-[580px] lg:min-h-full p-0 m-0 overflow-hidden">
-        
-        {/* Parallax image container */}
-        <div className="relative w-full h-[480px] sm:h-[580px] lg:h-full min-h-[480px] lg:min-h-full overflow-hidden p-0 m-0 rounded-none">
-          <motion.div
-            className="w-full h-[118%] -top-[9%] relative overflow-hidden"
-            style={{ y: imageParallaxY }}
-          >
-            {/* Cinematic Image Load */}
-            <motion.img
-              src="/ajwad.jpg"
-              alt="Portrait of Ajwad Abdulla Alavi"
-              className="w-full h-full object-cover select-none rounded-none"
-              style={{
-                objectPosition: 'center 20%',
-              }}
-              initial={{ opacity: 0, scale: 1.15 }}
-              animate={{ opacity: 1, scale: 1.0 }}
-              transition={{
-                duration: 1.5,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              loading="eager"
-              width="600"
-              height="800"
-            />
-          </motion.div>
-        </div>
-
+      <div className="relative w-full h-full min-h-[480px] lg:min-h-full p-0 overflow-hidden border-t lg:border-t-0 lg:border-l border-gray-300">
+        <motion.img
+          src="/ajwad.jpg"
+          alt="Portrait of Ajwad Abdulla Alavi"
+          className="absolute inset-0 w-full h-full object-cover object-[center_top] grayscale contrast-125 select-none rounded-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 1.0,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          loading="eager"
+          width="600"
+          height="800"
+        />
       </div>
 
     </section>

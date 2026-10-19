@@ -25,41 +25,33 @@ export const CredentialsAndSkills: React.FC = () => {
               Credentials &amp; Skills
             </motion.h2>
 
-            {/* ACCA Detail & The Massive Metric Block (Thin top border) */}
+            {/* ACCA Detail Block (Thin top border) */}
             <motion.div
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="border-t border-gray-300 pt-8 pb-10 grid grid-cols-1 sm:grid-cols-12 gap-8 items-start"
+              className="border-t border-gray-300 pt-8 pb-10 flex flex-col"
             >
-              {/* ACCA Detail */}
-              <div className="sm:col-span-6 flex flex-col justify-center">
-                {/* 3 red-orange segmented dashes */}
-                <div className="flex items-center gap-1.5 mb-5" aria-hidden="true">
-                  <span className="w-8 h-1 bg-[#E03C1A] inline-block" />
-                  <span className="w-8 h-1 bg-[#E03C1A] inline-block" />
-                  <span className="w-8 h-1 bg-[#E03C1A] inline-block" />
-                </div>
+              {/* 3 red-orange segmented dashes */}
+              <div className="flex items-center gap-1.5 mb-5" aria-hidden="true">
+                <span className="w-8 h-1 bg-[#E03C1A] inline-block" />
+                <span className="w-8 h-1 bg-[#E03C1A] inline-block" />
+                <span className="w-8 h-1 bg-[#E03C1A] inline-block" />
+              </div>
 
-                <h3 className="text-3xl font-black tracking-tight text-[#111111] mb-3">
+              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-3">
+                <h3 className="text-3xl font-black tracking-tight text-[#111111]">
                   ACCA Affiliate
                 </h3>
-
-                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-normal">
-                  Completed all 13 professional examinations and earned the Strategic Professional Certificate (2026).
-                </p>
-              </div>
-
-              {/* The Massive Metric (13 / 13) */}
-              <div className="sm:col-span-6 flex flex-col sm:items-end text-left sm:text-right justify-center">
-                <span className="text-7xl md:text-9xl font-black tracking-tighter text-[#111111] leading-none select-none">
-                  13 / 13
-                </span>
-                <span className="text-sm font-bold tracking-widest text-[#C83415] uppercase mt-3">
-                  EXAMS COMPLETED IN 2026
+                <span className="text-[#E03C1A] text-[10px] font-bold tracking-widest uppercase">
+                  COMPLETED JULY 2026
                 </span>
               </div>
+
+              <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-normal">
+                ACCA Affiliate (July 2026). Specializing in Advanced Financial Management and Audit Compliance.
+              </p>
             </motion.div>
 
             {/* Education Ledger Rows (Thin horizontal separation lines) */}

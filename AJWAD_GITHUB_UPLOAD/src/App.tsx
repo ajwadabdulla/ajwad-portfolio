@@ -6,6 +6,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ScrollControls } from './components/ScrollControls';
 import { DotFieldCanvas } from './components/DotFieldCanvas';
+import { ScrollBlurOverlay } from './components/ScrollBlurOverlay';
 
 // Code-Split Below-the-Fold Components via React.lazy() to reduce initial JS payload
 const Ticker = lazy(() => import('./components/Ticker'));
@@ -51,6 +52,9 @@ export const App: React.FC = () => {
       {/* Background dot field canvas */}
       <DotFieldCanvas />
 
+      {/* Dynamic Scroll Blur Overlay (Framer Motion) */}
+      <ScrollBlurOverlay />
+
       {/* Top Sticky Navbar */}
       <Navbar />
 
@@ -60,7 +64,7 @@ export const App: React.FC = () => {
       </div>
 
       {/* Main Dossier Curtain - Overlaps the Hero cleanly on scroll */}
-      <main className="relative z-10 bg-[#F9F9FA] shadow-[0_-25px_50px_rgba(0,0,0,0.06)] border-t border-gray-300">
+      <main className="relative z-20 bg-[#F9F9FA] shadow-[0_-25px_50px_rgba(0,0,0,0.06)] border-t border-gray-300">
         <Suspense fallback={<div className="min-h-[160px] bg-[#F9F9FA]" />}>
           {/* Sideways Ticker */}
           <Ticker />
@@ -83,7 +87,7 @@ export const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <div className="relative z-10 bg-[#F9F9FA]">
+      <div className="relative z-20 bg-[#F9F9FA]">
         <Suspense fallback={<div className="h-24 bg-[#F9F9FA]" />}>
           <Footer />
         </Suspense>
