@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -84,17 +83,9 @@ export const Navbar: React.FC = () => {
               >
                 {link.name}
 
-                {/* The "HaloNav" Gliding Line Active Indicator */}
+                {/* Active Indicator Underline */}
                 {isActive && (
-                  <motion.div
-                    layoutId="activeNavIndicator"
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 30,
-                    }}
-                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#E03C1A]"
-                  />
+                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#E03C1A]" />
                 )}
               </a>
             );

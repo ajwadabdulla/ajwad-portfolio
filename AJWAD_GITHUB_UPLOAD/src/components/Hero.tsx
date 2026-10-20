@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { m, useScroll, useTransform } from 'framer-motion';
 
 export const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
       <div className="flex flex-col justify-center px-6 sm:px-12 lg:px-16 xl:px-20 pt-28 pb-16 lg:py-24 relative z-10">
         
         {/* Scroll-driven fade-out wrapper */}
-        <motion.div
+        <m.div
           style={{
             opacity: contentOpacity,
             y: contentTranslateY,
@@ -58,34 +58,34 @@ export const Hero: React.FC = () => {
           className="max-w-2xl flex flex-col text-left"
         >
           {/* Staggered text reveal container */}
-          <motion.div
+          <m.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="flex flex-col"
           >
             {/* Headline: Candidate Name */}
-            <motion.h1
+            <m.h1
               variants={itemVariants}
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-[76px] font-black leading-[0.98] tracking-tighter text-[#111111] mb-6 rounded-none select-none"
             >
               Ajwad Abdulla Alavi
-            </motion.h1>
+            </m.h1>
 
             {/* Subheadline */}
-            <motion.p
+            <m.p
               variants={itemVariants}
               className="text-base sm:text-lg text-neutral-600 font-normal leading-relaxed max-w-xl rounded-none"
             >
               ACCA Affiliate and Accounting graduate based in Bahrain. Open to audit, internal audit, and financial analysis roles across the GCC.
-            </motion.p>
-          </motion.div>
-        </motion.div>
+            </m.p>
+          </m.div>
+        </m.div>
 
         {/* ========================================================
             VERTICAL SCROLL INDICATOR
             ======================================================== */}
-        <motion.div
+        <m.div
           style={{ opacity: contentOpacity }}
           className="hidden lg:flex items-center gap-3 absolute bottom-10 left-16 xl:left-20 z-20 pointer-events-none select-none"
           initial={{ opacity: 0 }}
@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
             SCROLL
           </span>
           <div className="w-[1.5px] h-12 bg-neutral-300 relative overflow-hidden">
-            <motion.div
+            <m.div
               className="w-full h-5 bg-[#E03C1A]"
               animate={{
                 y: [-20, 52],
@@ -108,7 +108,7 @@ export const Hero: React.FC = () => {
               }}
             />
           </div>
-        </motion.div>
+        </m.div>
 
       </div>
 
@@ -116,7 +116,7 @@ export const Hero: React.FC = () => {
           RIGHT COLUMN - Strict 50% Split, B&W Editorial Portrait
           ======================================================== */}
       <div className="relative w-full h-full min-h-[480px] lg:min-h-full p-0 overflow-hidden border-t lg:border-t-0 lg:border-l border-gray-300">
-        <motion.img
+        <m.img
           src="/ajwad.webp"
           srcSet="/ajwad-hero-450.webp 450w, /ajwad.webp 900w"
           sizes="(max-width: 1024px) 100vw, 50vw"
