@@ -117,16 +117,20 @@ export const Hero: React.FC = () => {
           ======================================================== */}
       <div className="relative w-full h-full min-h-[480px] lg:min-h-full p-0 overflow-hidden border-t lg:border-t-0 lg:border-l border-gray-300">
         <motion.img
-          src="/ajwad.jpg"
+          src="/ajwad.webp"
+          srcSet="/ajwad-hero-450.webp 450w, /ajwad.webp 900w"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           alt="Portrait of Ajwad Abdulla Alavi"
           className="absolute inset-0 w-full h-full object-cover object-[center_top] grayscale contrast-125 select-none rounded-none"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: 1.0,
+            duration: 0.6,
             ease: [0.16, 1, 0.3, 1],
           }}
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
           width="600"
           height="800"
         />

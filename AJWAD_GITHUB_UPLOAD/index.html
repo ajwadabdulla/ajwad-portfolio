@@ -11,10 +11,16 @@
     <meta property="og:title" content="Ajwad Abdulla Alavi | ACCA Affiliate & Audit Graduate" />
     <meta property="og:description" content="ACCA Affiliate and accounting graduate based in Bahrain. Open to audit, internal audit, and financial analysis roles across the GCC." />
     <meta property="og:url" content="https://ajwad-portfolio-iten.vercel.app/" />
+    <meta property="og:image" content="https://ajwad-portfolio-iten.vercel.app/ajwad.webp" />
 
-    <!-- AI Agent & Agentic Browsing Schemas -->
-    <link rel="help" type="text/plain" href="/llms.txt" title="LLMs Text" />
-    <link rel="alternate" type="application/json" href="/ai-catalog.json" title="AI Agent Catalog" />
+    <!-- Preload Critical LCP Hero Image for 100/100 Mobile Performance -->
+    <link rel="preload" as="image" href="/ajwad-hero-450.webp" type="image/webp" fetchpriority="high" media="(max-width: 768px)" />
+    <link rel="preload" as="image" href="/ajwad.webp" type="image/webp" fetchpriority="high" media="(min-width: 769px)" />
+
+    <!-- AI Agent & Agentic Browsing Schemas (ARD & llms.txt Standards) -->
+    <link rel="help" type="text/markdown" href="/llms.txt" title="LLMs Text" />
+    <link rel="alternate" type="application/json" href="/.well-known/ai-catalog.json" title="AI Agent Catalog" />
+    <link rel="alternate" type="application/json" href="/ai-catalog.json" title="AI Catalog" />
 
     <!-- Schema.org JSON-LD for AI Search & Google Gemini Discoverability -->
     <script type="application/ld+json">
@@ -44,6 +50,8 @@
       ],
       "knowsAbout": [
         "Audit and Assurance",
+        "Advance Audit Assurance",
+        "Advanced Financial Management",
         "Internal Controls",
         "Financial Reporting",
         "IFRS",

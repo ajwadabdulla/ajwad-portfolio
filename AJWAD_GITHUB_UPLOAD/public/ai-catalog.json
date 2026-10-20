@@ -1,85 +1,44 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "version": "1.0.0",
-  "name": "Ajwad Abdulla Alavi - Audit & Finance Portfolio",
-  "description": "Professional profile, ACCA credentials, and audit case studies for Ajwad Abdulla Alavi, an ACCA Affiliate based in Bahrain.",
-  "url": "https://ajwad-portfolio-iten.vercel.app/",
-  "category": "professional-portfolio",
-  "author": {
-    "name": "Ajwad Abdulla Alavi",
-    "role": "ACCA Affiliate & Accounting Graduate",
-    "location": "Bahrain",
-    "email": "ajwadabdulla42@gmail.com",
-    "telephone": "+973 3383 1233",
-    "sameAs": [
-      "https://www.linkedin.com/in/ajwadabdulla"
-    ]
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Ajwad Abdulla Alavi",
+    "identifier": "did:web:ajwad-portfolio-iten.vercel.app",
+    "documentationUrl": "https://ajwad-portfolio-iten.vercel.app/llms.txt"
   },
-  "credentials": [
+  "entries": [
     {
-      "type": "Professional Qualification",
-      "name": "ACCA Affiliate",
-      "issuer": "Association of Chartered Certified Accountants (ACCA)",
-      "status": "All 13 Professional Exams Completed",
-      "year": 2026,
-      "strategicProfessionalPapers": [
-        "Strategic Business Leader (SBL)",
-        "Strategic Business Reporting (SBR)",
-        "Advanced Financial Management (AFM)",
-        "Advanced Audit and Assurance (AAA)"
+      "identifier": "urn:air:ajwad:portfolio-dossier",
+      "displayName": "Professional Portfolio & Dossier",
+      "type": "text/markdown",
+      "url": "https://ajwad-portfolio-iten.vercel.app/llms.txt",
+      "description": "Professional profile, ACCA Affiliate credentials, audit experience, and core competencies for Ajwad Abdulla Alavi.",
+      "representativeQueries": [
+        "Find ACCA Affiliate audit candidates in Bahrain",
+        "View audit and financial analysis experience for Ajwad Abdulla Alavi",
+        "What accounting and audit tools does Ajwad know?"
       ]
     },
     {
-      "type": "Academic Degree",
-      "name": "Bachelor of Science (B.Sc) in Accounting",
-      "institution": "Dayananda Sagar University, Bangalore",
-      "period": "2021 - 2024"
-    }
-  ],
-  "experience": [
-    {
-      "role": "Finance Intern",
-      "company": "Trans Gulf Consult",
-      "location": "Bahrain",
-      "period": "Jul 2025 - Aug 2025"
+      "identifier": "urn:air:ajwad:curriculum-vitae",
+      "displayName": "Official Curriculum Vitae",
+      "type": "application/pdf",
+      "url": "https://ajwad-portfolio-iten.vercel.app/Ajwad_Abdulla_Alavi_CV.pdf",
+      "description": "Verified CV and credentials document for Ajwad Abdulla Alavi.",
+      "representativeQueries": [
+        "Download Ajwad Abdulla Alavi CV",
+        "View ACCA certificate and resume for Ajwad"
+      ]
     },
     {
-      "role": "Accountant Intern",
-      "company": "Unity Contracting and Real Estate W.L.L.",
-      "location": "Bahrain",
-      "period": "Jun 2025 - Jul 2025"
+      "identifier": "urn:air:ajwad:full-dossier",
+      "displayName": "Comprehensive Text Dossier",
+      "type": "text/plain",
+      "url": "https://ajwad-portfolio-iten.vercel.app/llms-full.txt",
+      "description": "Complete text dossier of case studies, education history, and career experience.",
+      "representativeQueries": [
+        "Get complete background on Ajwad Abdulla Alavi",
+        "Summarize Ajwad's financial statement analysis case study"
+      ]
     }
-  ],
-  "competencies": {
-    "auditAndControls": [
-      "Internal controls",
-      "Risk analysis",
-      "Compliance testing",
-      "IFRS",
-      "ISA",
-      "Accounting Operations",
-      "Financial Reporting"
-    ],
-    "analysisAndTools": [
-      "Advanced Excel",
-      "Power BI",
-      "Zoho Books",
-      "Google Sheets",
-      "Google Slides"
-    ],
-    "emergingTech": [
-      "AI-Assisted Workflows",
-      "Data Analytics",
-      "AI Financial Modelling"
-    ],
-    "languages": [
-      "English (fluent)",
-      "Arabic (basic)"
-    ]
-  },
-  "endpoints": {
-    "llms": "https://ajwad-portfolio-iten.vercel.app/llms.txt",
-    "cv": "https://ajwad-portfolio-iten.vercel.app/Ajwad_Abdulla_Alavi_CV.pdf",
-    "homepage": "https://ajwad-portfolio-iten.vercel.app/"
-  }
+  ]
 }
