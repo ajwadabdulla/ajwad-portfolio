@@ -1,43 +1,45 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+interface ScrollBlurOverlayProps {
+  className?: string;
+}
+
 /**
  * ScrollBlurOverlay
  * 
- * Dynamic Scroll Blur Overlay for the Hero section:
- * As the user scrolls down (0px to 400px), smoothly transitions from
- * completely transparent to a heavily blurred (20px) frosted-glass effect
- * tinted with the agency off-white background color (rgba(249, 249, 250, 0.85)).
- * 
- * Positioned fixed inset-0 pointer-events-none z-10 over the hero content,
- * allowing the content below to remain clickable without interference.
+ * Recreates the dynamic scroll blur overlay effect:
+ * As the user scrolls from 0px to 500px, smoothly transitions from completely
+ * transparent to a heavily blurred (24px), tinted frosted-glass effect
+ * using the agency off-white palette (#F9F9FA / rgba(249, 249, 250, 0.85)).
  */
-export const ScrollBlurOverlay: React.FC = () => {
-  // 1. Framer Motion Setup: Extract raw pixel scroll value
+export const ScrollBlurOverlay: React.FC<ScrollBlurOverlayProps> = ({
+  className = "fixed inset-0 pointer-events-none z-10 rounded-none select-none"
+}) => {
+  // 1. Framer Motion Setup: extract raw pixel scroll value
   const { scrollY } = useScroll();
 
-  // 2. Dynamic Interpolation:
-  // Map scroll position to a blur pixel value (0px scroll -> 0px blur; 400px scroll -> 20px blur)
-  const blurAmount = useTransform(scrollY, [0, 400], [0, 20]);
+  // 2. Dynamic Interpolation (useTransform)
+  // Map scroll position to a blur pixel value: 0px at top -> 24px at 500px scroll
+  const blurAmount = useTransform(scrollY, [0, 500], [0, 24]);
 
-  // Convert number into a CSS backdrop-filter string
+  // Convert numeric blur value into a CSS backdrop-filter string
   const backdropFilter = useTransform(blurAmount, (blur) => `blur(${blur}px)`);
 
-  // Map scroll position to an opacity value for the background tint (0 to 0.85)
-  const bgOpacity = useTransform(scrollY, [0, 400], [0, 0.85]);
+  // Map scroll position to an opacity value for the background tint (0 -> 0.85)
+  const bgOpacity = useTransform(scrollY, [0, 500], [0, 0.85]);
 
-  // Convert to rgba string using exact agency off-white background color (#F9F9FA)
+  // Convert to rgba string using agency off-white background color (#F9F9FA = 249, 249, 250)
   const backgroundColor = useTransform(
     bgOpacity,
     (opacity) => `rgba(249, 249, 250, ${opacity})`
   );
 
-  // 3. The Overlay Component:
-  // fixed inset-0 pointer-events-none z-10 with direct style binding
+  // 3. The Overlay Component
   return (
     <motion.div
       aria-hidden="true"
-      className="fixed inset-0 pointer-events-none z-10 rounded-none select-none"
+      className={className}
       style={{
         backdropFilter,
         WebkitBackdropFilter: backdropFilter,

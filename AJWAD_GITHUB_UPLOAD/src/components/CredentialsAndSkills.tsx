@@ -50,7 +50,7 @@ export const CredentialsAndSkills: React.FC = () => {
               </div>
 
               <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-normal">
-                ACCA Affiliate (July 2026). Specializing in Advanced Financial Management and Audit Compliance.
+                ACCA Affiliate (July 2026). Specializing in Advanced Financial Management and Advance Audit Assurance.
               </p>
             </motion.div>
 

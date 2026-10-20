@@ -49,13 +49,13 @@ export const portfolioData = {
     headline: "I finished my ACCA exams in 2026 and I'm looking for my first role in audit and finance.",
     subtitle: "Accounting graduate in Bahrain with internship experience in reconciliations, internal controls and compliance documentation. Open to audit, internal audit and financial analyst roles across the GCC.",
     targetMarkets: ["Bahrain", "Saudi Arabia", "Qatar"],
-    badgeText: "ACCA Affiliate • July 2026",
-    examCount: "Completed",
-    examLabel: "ACCA Affiliate",
-    examCaption: "Strategic Professional completed July 2026",
+    badgeText: "ACCA Affiliate â€¢ 2026",
+    examCount: "13/13",
+    examLabel: "ACCA exams passed",
+    examCaption: "Strategic Professional completed June 2026",
   },
   about: {
-    text: "I am an accounting graduate from Dayananda Sagar University, Bangalore, with earlier schooling at The Indian School, Bahrain. I have completed all ACCA examinations, including Advanced Audit and Assurance and Advanced Financial Management. My focus is on starting a career in audit and assurance, internal audit, or corporate financial analysis in the GCC. I bring hands-on internship experience in supplier ledger compliance, bank reconciliations, inventory controls, and financial statement review under IFRS.",
+    text: "I am an accounting graduate from Dayananda Sagar University, Bangalore, with earlier schooling at The Indian School, Bahrain. I have completed all 13 ACCA examinations, including Advanced Audit and Assurance and Advanced Financial Management. My focus is on starting a career in audit and assurance, internal audit, or corporate financial analysis in the GCC. I bring hands-on internship experience in supplier ledger compliance, bank reconciliations, inventory controls, and financial statement review under IFRS.",
     languages: [
       { name: "English", level: "Fluent" },
       { name: "Arabic", level: "Basic" }
@@ -65,7 +65,7 @@ export const portfolioData = {
     acca: {
       status: "ACCA Affiliate",
       organization: "Association of Chartered Certified Accountants (UK)",
-      completionDate: "July 2026",
+      completionDate: "June 2026",
       registrationNo: "5634576",
       certificateNo: "2885634576450",
       levels: [
