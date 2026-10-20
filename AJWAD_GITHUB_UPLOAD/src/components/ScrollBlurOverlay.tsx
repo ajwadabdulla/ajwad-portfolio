@@ -20,14 +20,14 @@ export const ScrollBlurOverlay: React.FC<ScrollBlurOverlayProps> = ({
   const { scrollY } = useScroll();
 
   // 2. Dynamic Interpolation (useTransform)
-  // Map scroll position to a blur pixel value: 0px at top -> 24px at 500px scroll
-  const blurAmount = useTransform(scrollY, [0, 500], [0, 24]);
+  // Map scroll position to a blur pixel value: delayed start at 300px -> 20px at 700px scroll
+  const blurAmount = useTransform(scrollY, [300, 700], [0, 20]);
 
   // Convert numeric blur value into a CSS backdrop-filter string
   const backdropFilter = useTransform(blurAmount, (blur) => `blur(${blur}px)`);
 
   // Map scroll position to an opacity value for the background tint (0 -> 0.85)
-  const bgOpacity = useTransform(scrollY, [0, 500], [0, 0.85]);
+  const bgOpacity = useTransform(scrollY, [300, 700], [0, 0.85]);
 
   // Convert to rgba string using agency off-white background color (#F9F9FA = 249, 249, 250)
   const backgroundColor = useTransform(

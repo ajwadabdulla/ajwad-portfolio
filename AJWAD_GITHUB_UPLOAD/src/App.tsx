@@ -62,7 +62,7 @@ export const App: React.FC = () => {
         <Navbar />
 
         {/* Hero Section - Pinned backdrop with preloaded high-priority WebP portrait */}
-        <div className="relative lg:sticky lg:top-0 z-0 w-full min-h-screen">
+        <div className="relative lg:sticky lg:top-0 z-0 w-full min-h-screen pt-20 md:pt-0">
           <Hero />
         </div>
 

@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[#F9F9FA] border-b border-gray-300 rounded-none select-none">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[#F9F9FA] border-b-0 md:border-b md:border-gray-200 rounded-none select-none">
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
         
         {/* Left: AA Logo in ultra-bold, black geometric sans-serif */}

@@ -4,15 +4,18 @@ import { m, useScroll, useTransform } from 'framer-motion';
 export const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
 
-  // Scroll-Driven hooks for left-column fade-out
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start start', 'end start'],
-  });
+  // Scroll-Driven hooks for parallax & delayed blur
+  const { scrollY, scrollYProgress } = useScroll();
 
   // Content Fade-Out: Text in the left column smoothly fades to opacity: 0 and glides upward as user scrolls deep
   const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
   const contentTranslateY = useTransform(scrollYProgress, [0, 0.65], [0, -45]);
+
+  // Delayed Mobile Dynamic Scroll Blur:
+  // Stays perfectly crisp (0px blur) for the first 300px of scrolling so the stacked mobile image is 100% visible,
+  // then smoothly transitions from 0px to 20px blur between 300px and 700px scroll.
+  const imageBlur = useTransform(scrollY, [300, 700], [0, 20]);
+  const imageFilter = useTransform(imageBlur, (val) => `grayscale(1) contrast(1.25) blur(${val}px)`);
 
   // Initial Load Stagger Variants
   const containerVariants = {
@@ -47,7 +50,7 @@ export const Hero: React.FC = () => {
       {/* ========================================================
           LEFT COLUMN - Calder & Wynn Layout
           ======================================================== */}
-      <div className="flex flex-col justify-center px-6 sm:px-12 lg:px-16 xl:px-20 pt-28 pb-16 lg:py-24 relative z-10">
+      <div className="flex flex-col justify-center px-6 sm:px-12 lg:px-16 xl:px-20 pt-4 md:pt-24 pb-16 lg:py-24 relative z-10">
         
         {/* Scroll-driven fade-out wrapper */}
         <m.div
@@ -121,7 +124,8 @@ export const Hero: React.FC = () => {
           srcSet="/ajwad-hero-450.webp 450w, /ajwad.webp 900w"
           sizes="(max-width: 1024px) 100vw, 50vw"
           alt="Portrait of Ajwad Abdulla Alavi"
-          className="absolute inset-0 w-full h-full object-cover object-[center_top] grayscale contrast-125 select-none rounded-none"
+          className="absolute inset-0 w-full h-full object-cover object-[center_top] select-none rounded-none"
+          style={{ filter: imageFilter }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
