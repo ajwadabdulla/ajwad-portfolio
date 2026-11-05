@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
               variants={itemVariants}
               className="text-base sm:text-lg text-neutral-600 font-normal leading-relaxed max-w-xl rounded-none"
             >
-              ACCA Affiliate and Accounting graduate based in Bahrain. Open to audit, internal audit, and financial analysis roles across the GCC.
+              <span className="text-[#E03C1A] font-bold">ACCA Affiliate</span> and Accounting graduate based in Bahrain. Open to audit, internal audit, and financial analysis roles across the GCC.
             </m.p>
           </m.div>
         </m.div>
